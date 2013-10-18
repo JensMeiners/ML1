@@ -22,8 +22,8 @@ models = [
 	{'f': classifiers.C, 'w': (np.array([0, 2]), 5, 2)},
 	{'f': classifiers.D, 'w': (np.array([[2, 1], [1, 1]]), np.array([0, 0]), -16)},
 	{'f': classifiers.ring, 'w': (np.array([0, 2]), 6, 2)},
-	{'f': classifiers.point, 'w': (np.array([0, 0]))},
-	{'f': classifiers.rect, 'w': (np.array([0, 0]), 4)},
+	{'f': classifiers.point, 'w': (np.array([1, 2]))},
+	{'f': classifiers.rect, 'w': (np.array([1, 2]), 6)},
 ]
 
 
