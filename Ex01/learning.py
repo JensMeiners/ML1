@@ -20,10 +20,6 @@ def learn(X,T):
 
 	params = [(np.array([w1, w2]), b) for w1 in range(-10,10)
 					for w2 in range(-10,10) for b in range(-10,10)]
-	# TODO: complete this list with more possible parameters
-	#       hint:
-	#        use nested loops to generate a large number
-	#        of candidate parameters
 
 	for param in params:
 

@@ -3,8 +3,8 @@ import numpy as np
 # classifier A
 def A(x,(a)):
 	assert(a[0] > 0)
-	return a[0]**x[0] > x[1]	
-	
+	return a[0]**x[0] > x[1]
+
 # classifier B
 def B(x,(w,b)):
 	return np.dot(w,x) + b > 0
@@ -18,7 +18,7 @@ def C(x,(c,r,p)):
 # classifier D
 def D(x,(A,w,b)):
 	assert(A.shape == (2,2))
-	return (np.dot(np.dot(np.transpose(x),A),x) + np.dot(w,x) + b) > 0 
+	return (np.dot(np.dot(np.transpose(x),A),x) + np.dot(w,x) + b) > 0
 
 # classifier "ring"
 #  x: data point
