@@ -30,10 +30,15 @@ def ring(x,(c,r,w)):
 	assert(w < r)
 	return C(x,(c,r-w,2)) and (not C(x,(c,r+w,2)))
 
+def point(x,(p)):
+	return not(np.array(x) == p).all()
 
 # classifier "triangle"
 #  x: data point
 #  c: center of the rectangle
 #  s: size of the rectangle
 def rect(x,(c,s)):
-	pass # TODO: implement
+	assert(s > 0)
+	b = s / 2
+	#print np.array([0,c[1]])
+	return B(x,(np.array([0,c[1]]),b))
