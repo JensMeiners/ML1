@@ -28,7 +28,7 @@ def D(x,(A,w,b)):
 def ring(x,(c,r,w)):
 	assert(r > 0)
 	assert(w < r)
-	return C(x,(c,r+w,2)) and (not C(x,(c,r-w,2)))
+	return C(x,(c,r-w,2)) and (not C(x,(c,r+w,2)))
 
 
 # classifier "triangle"
