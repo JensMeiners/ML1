@@ -38,11 +38,9 @@ def point(x,(p)):
 #  c: center of the rectangle
 #  s: size of the rectangle
 def rect(x,(c,s)):
-	assert(s > 0)
-	b = s / 2 + c[0]
-	vertical = B(x,(np.array([1,0]),b)) and B(x,(np.array([-1,0]),b))
-	horizontal = B(x,(np.array([0,1]),b)) and B(x,(np.array([0,-1]),b))
-	return vertical and horizontal
+	vertical = B(x,(np.array([1,0]),s[0] / 2 - c[0])) and B(x,(np.array([-1,0]),s[0] / 2 + c[0]))
+	horizontal = B(x,(np.array([0,1]),s[1] / 2 - c[1])) and B(x,(np.array([0,-1]),s[1] / 2 + c[1]))
+	return horizontal and vertical
 
 
 
