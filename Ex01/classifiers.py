@@ -13,12 +13,12 @@ def B(x,(w,b)):
 def C(x,(c,r,p)):
 	assert(p == 1 or p == 2)
 	assert(r > 0)
-	return np.abs(((x-c)**p)).sum() >= r**p
+	return (np.abs(x-c)**p).sum() >= r**p
 
 # classifier D
 def D(x,(A,w,b)):
 	assert(A.shape == (2,2))
-	return (np.mat(np.transpose(x))*A*np.mat(x) + np.dot(w,x) + b) > 0 
+	return (np.dot(np.dot(np.transpose(x),A),x) + np.dot(w,x) + b) > 0 
 
 # classifier "ring"
 #  x: data point
