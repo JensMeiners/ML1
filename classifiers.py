@@ -2,21 +2,23 @@ import numpy as np
 
 # classifier A
 def A(x,(a)):
-	pass # TODO: implement
-
+	assert(a[0] > 0)
+	return a[0]**x[0] > x[1]	
+	
 # classifier B
 def B(x,(w,b)):
-	pass # TODO: implement
+	return np.dot(w,x) + b > 0
 
 # classifier C
 def C(x,(c,r,p)):
 	assert(p == 1 or p == 2)
 	assert(r > 0)
-	return ((x-c)**p).sum() <= r**p
+	return np.abs(((x-c)**p)).sum() >= r**p
 
 # classifier D
 def D(x,(A,w,b)):
-	pass # TODO: implement
+	assert(A.shape == (2,2))
+	return (np.mat(np.transpose(x))*A*np.mat(x) + np.dot(w,x) + b) > 0 
 
 # classifier "ring"
 #  x: data point
@@ -35,4 +37,3 @@ def ring(x,(c,r,w)):
 #  s: size of the rectangle
 def rect(x,(c,s)):
 	pass # TODO: implement
-
