@@ -2,3 +2,4 @@
 .pydevproject
 .*
 !/.gitignore
+Ex04/characters.mat
